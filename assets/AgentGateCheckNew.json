@@ -1,0 +1,896 @@
+{
+	"form_id": "WorkFlowGateCheck",
+	"form_no": "WorkFlowGateCheck",
+	"form_title": "Gate Check",
+	"sheet_no": "",
+	"audit_type": "",
+	"VisitId": "",
+	"order_no": "",
+	"primary_form_type": "",
+	"detail": {
+		"child_forms": {
+			"items": []
+		},
+		"header": {
+			"items": [{
+				"sub_title": "Gate Check",
+				"questions": [{
+						"id": "1",
+						"type": "text_view",
+						"validation": "Id",
+						"question": "Id:",
+						"work_point": "",
+						"point_item": "",
+						"category_code": "Id",
+						"default_answer": "",
+						"no_of_images": "",
+						"mandatory": true
+					},
+					{
+						"id": "2",
+						"type": "text_view",
+						"validation": "Date and Time",
+						"question": "Visit date and time:",
+						"work_point": "",
+						"point_item": "",
+						"category_code": "visit_date_and_time",
+						"default_answer": "",
+						"no_of_images": "",
+						"mandatory": true
+					},
+					{
+						"id": "3",
+						"type": "text_view",
+						"validation": "name",
+						"question": "LeadGangerCSSID:",
+						"work_point": "",
+						"point_item": "",
+						"category_code": "LeadGangerCSSID",
+						"default_answer": "",
+						"no_of_images": "",
+						"blocked_option": "1",
+						"mandatory": false
+					},
+					{
+						"id": "4",
+						"type": "text_view",
+						"validation": "CSSID",
+						"question": "CSSID:",
+						"work_point": "",
+						"point_item": "",
+						"category_code": "CSSID",
+						"default_answer": "",
+						"no_of_images": "",
+						"blocked_option": "1",
+						"mandatory": false
+					},
+					{
+						"id": "5",
+						"type": "text_view",
+						"validation": "name",
+						"question": "Username:",
+						"work_point": "",
+						"point_item": "",
+						"category_code": "Username",
+						"default_answer": "",
+						"no_of_images": "",
+						"mandatory": false
+					}
+				]
+			}]
+		},
+		"body": {
+			"items": [{
+					"sub_title": "General",
+					"questions": [{
+							"id": "1",
+							"type": "radio",
+							"validation": "radio",
+							"question": "Do you have any current COVID symptoms?",
+							"work_point": "",
+							"point_item": "",
+							"category_code": "NewSymptoms",
+							"default_answer": "",
+							"no_of_images": "",
+							"mandatory": true,
+						    "mandatory_answer": "no",
+						    "given_answer": "",
+						    "image_path": ""
+						},
+						{
+							"id": "2",
+							"type": "photo",
+							"validation": "Covid19Guidance",
+							"question": "Please obtain an image of your COVID-19 key/critical principles guidance document",
+							"work_point": "",
+							"point_item": "",
+							"category_code": "Covid19Guidance",
+							"default_answer": "",
+							"no_of_images": "",
+							"mandatory": false,
+							"blocked-option": "2",
+							"mandatory_answer": "no",
+							"given_answer": "",
+							"image_path": ""
+						},
+
+						{
+							"id": "3",
+							"type": "photo",
+							"validation": "Covid19Letter",
+							"question": "Please obtain an image of your COVID-19 key/critical worker letter",
+							"work_point": "",
+							"point_item": "",
+							"category_code": "Covid19Letter",
+							"default_answer": "",
+							"no_of_images": "",
+							"mandatory": false,
+							"blocked-option": "2",
+							"mandatory_answer": "no",
+							"given_answer": "",
+							"image_path": ""
+						},
+						{
+							"id": "4",
+							"type": "photo",
+							"validation": "Covid19Board",
+							"question": "Please obtain an image of your COVID-19 key/critical worker courtesy board",
+							"work_point": "",
+							"point_item": "",
+							"category_code": "Covid19Board",
+							"default_answer": "",
+							"no_of_images": "",
+							"mandatory": false,
+							"blocked-option": "2",
+							"mandatory_answer": "no",
+							"given_answer": "",
+							"image_path": ""
+						},
+						{
+							"id": "5",
+							"type": "photo",
+							"validation": "radio",
+							"question": "Badge",
+							"work_point": "",
+							"point_item": "",
+							"category_code": "Badge",
+							"default_answer": "",
+							"no_of_images": "",
+							"mandatory": true,
+							"blocked-option": "2",
+							"given_answer": "",
+							"image_path": "",
+							"mandatory_answer": "no",
+							"imagearray" : [
+								{
+									"name": "PPE being worn",
+									"category_code": "PPEWorn",
+									"image_name": "tooltip_iq.png",
+									"description": "Photo of operative wearing PPE"
+								},
+								{
+									"name": "ID Card",
+									"category_code": "PhotoId",
+									"image_name": "tooltip_iq.png",
+									"description": "Photo of ID card"
+								},
+								{
+									"name": "Lace up safety boots",
+									"category_code": "LaceUpBoots",
+									"image_name": "tooltip_iq.png",
+									"description": "Photo of boots"
+								}
+							]
+						}
+					]
+				},
+
+
+				{
+					"sub_title": "Workstream",
+					"categories": [
+						{
+							"id": "1",
+							"sub_title": "Civils",
+							"questions": [{
+									"id": "1",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you excavating today?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "CivilsExcavating",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+								    "mandatory_answer": "yes",
+								    "given_answer": "",
+								    "image_path": "",
+								    "instruction":  "Tooltip on the photo options",
+									"imagearray": [{
+											"name": "Cat",
+											"category_code": "CECat",
+											"image_name": "tooltip_iq.png",
+										    "description": "Take photo of calibration sticker"
+										},
+										{
+											"name": "Genny",
+											"category_code": "CECat",
+											"image_name": "tooltip_iq.png",
+											"description": ""
+										},
+										{
+											"name": "Jack hammer",
+											"category_code": "CEJackHammer",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of jack hammer"
+										},
+										{
+											"name": "Safe dig prints",
+											"category_code": "CESafeDigPrints",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of a page from safe dig prints"
+										},
+										{
+											"name": "Flame retardant clothing",
+											"category_code": "CEFlameRetardantClothing",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of operative wearing flame retardant clothing"
+										}
+									]
+								},
+								{
+									"id": "1",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you entering an underground box?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "CivilsUndergroundBox",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+									"mandatory_answer": "yes",
+									"given_answer": "",
+									"image_path": "",
+									"instruction":  "Tooltip on the photo options",
+									"imagearray": [
+										{
+											"name": "Box key",
+											"category_code": "CABoxKey",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the box key"
+										},
+										{
+											"name": "Box roller",
+											"category_code": "CABoxRoller",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the box roller"
+										},
+										{
+											"name": "GDU",
+											"category_code": "CAGDU",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the GDU calibration sticker"
+										},
+										{
+											"name": "SLG",
+											"category_code": "CASLG",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the SLG available on vehicle stored correctly"
+										}
+									]
+								},
+								{
+									"id": "1",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you using a mini digger?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "CivilsMiniDigger",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+									"mandatory_answer": "yes",
+									"given_answer": "",
+									"image_path": "",
+									"instruction":  "Photo of the mini digger condition",
+									"imagearray": [{
+											"name": "Mini digger",
+											"category_code": "CMDPhoto",
+											"image_name": "tooltip_iq.png",
+										    "description": "Photo of the mini digger condition"
+										},
+										{
+											"name": "Mini digger secured on trailer with 3 straps",
+											"category_code": "CMDSecured",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the mini digger strapped on trailer"
+										},
+										{
+											"name": "Mini digger bucket pins in place",
+											"category_code": "CMDPins",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the mini digger with bucket pins in place"
+										},
+										{
+											"name": "Excavator 3rd party qualification for competence",
+											"category_code": "CMDExcavatorCompetence",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of qualification card"
+										}
+									]
+								}
+							]
+						},
+						{
+							"id": "2",
+							"sub_title": "Asset",
+							"questions": [{
+									"id": "2",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you using a ladder today?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "AssetLadder",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+								"mandatory_answer": "yes",
+								"given_answer": "",
+								"image_path": "",
+								"instruction": "Photo of ladder to show condition",
+									"imagearray": [{
+											"name": "Helmet with chin strap",
+											"category_code": "ALHelmet",
+											"image_name": "tooltip_iq.png",
+										"description": "Photo of helmet with chin strap"
+										},
+										{
+											"name": "Ladder",
+											"category_code": "ALLadder",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of ladder to show condition"
+										},
+										{
+											"name": "Ladder secure rope",
+											"category_code": "ALLadderSecure",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of secure rope"
+										}
+									]
+								},
+								{
+									"id": "2",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you using a MEWP today?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "AssetMEWP",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+									"mandatory_answer": "yes",
+									"given_answer": "",
+									"image_path": "",
+									"instruction": "Tooltip on the photo options",
+									"imagearray": [{
+										"name": "Vehicle check sheet completed",
+										"category_code": "MEWPVehicleCheckSheet",
+										"image_name": "tooltip_iq.png",
+										"description": "Photo of the completed vehicle check sheet"
+									},
+										{
+											"name": "Helmet with chin strap",
+											"category_code": "MEWPHelmet",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of helmet with chin strap"
+										},
+										{
+											"name": "All Switches, function controls in good condition",
+											"category_code": "MEWPSwitchesControlsGood",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the control panel"
+										},
+										{
+											"name": "Lights,beacons,warning devices",
+											"category_code": "EWPLightBeacons",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the beacons"
+										},
+										{
+											"name": "Jacks-legs, stabilisers, outtriggers, levelling devices",
+											"category_code": "MEWPJackSatabilisers",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the condition of the jacks"
+										},
+										{
+											"name": "Bucket clean and tidy",
+											"category_code": "MEWPBucketClean",
+											"image_name": "tooltip_iq.png",
+											"description": " Photo of the bucket floor"
+										},
+										{
+											"name": "Bucket lanyard fitted",
+											"category_code": "MEWPBucketLanyardFitted",
+											"image_name": "tooltip_iq.png",
+											"description": " Photo of lanyard inspection label"
+										},
+										{
+											"name": "Harness in good condition and inspection date visible",
+											"category_code": "EWPHarnessGood",
+											"image_name": "tooltip_iq.png",
+											"description": " Photo of harness inspection label"
+										}
+									]
+								},
+								{
+									"id": "2",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you using a PEU today?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "AssetPEU",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+									"mandatory_answer": "yes",
+									"given_answer": "",
+									"image_path": "",
+									"instruction": "Tooltip on the photo options",
+									"imagearray": [{
+											"name": "Jacks-legs, stabilisers, outriggers, levelling devices",
+											"category_code": "PEUJacksStabilisers",
+											"image_name": "tooltip_iq.png",
+										"description":" Photo of stabilisation legs condition"
+										},
+										{
+											"name": "Extending arm is serviceable and no hydraulic leaks",
+											"category_code": "PEUExtendingArmServiceable",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of ending arm / boom condition"
+										},
+										{
+											"name": "Helmet with chin strap",
+											"category_code": "PEUHelmet",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of helmet with chin strap "
+										},
+										{
+											"name": "Vehicle check sheet completed",
+											"category_code": "PEUVehicleCheckSheet",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the completed vehicle check shee"
+										},
+										{
+											"name": "Lights, beacons, warning devices",
+											"category_code": "PEULightsBeacons",
+											"image_name": "tooltip_iq.png",
+											"description": " Photo of hazard beacons"
+										},
+										{
+											"name": "All switches, function controls in good condition",
+											"category_code": "PEUSwitchesGood",
+											"image_name": "tooltip_iq.png",
+											"description": " Photo of the function control panel"
+										}
+									]
+								},
+								{
+									"id": "2",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you excavating today?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "AssetExcavating",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+									"mandatory_answer": "yes",
+									"given_answer": "",
+									"image_path": "",
+									"instruction": "Tooltip on the photo options",
+									"imagearray": [{
+											"name": "Cat",
+											"category_code": "AECat",
+											"image_name": "tooltip_iq.png",
+										    "description": "Take photo of calibration sticker"
+										},
+										{
+											"name": "Genny",
+											"category_code": "AEGenny",
+											"image_name": "tooltip_iq.png",
+											"description": " Take photo of calibration sticker"
+										},
+										{
+											"name": "Hot job checks clear",
+											"category_code": "AEHotJobClear",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of LSBUD sheet in job pack"
+										},
+										{
+											"name": "Jack Hammer",
+											"category_code": "AEJackHammer",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of jack hammer"
+										},
+										{
+											"name": "Saw Cutter with dust suppression",
+											"category_code": "AESawCutter",
+											"image_name": "tooltip_iq.png",
+											"description": "Show dust suppression on saw"
+										},
+										{
+											"name": "NRSWA Card",
+											"category_code": "AENRSWACard",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of card in date front and back"
+										},
+										{
+											"name": "Safe Dig Prints",
+											"category_code": "AESafeDigPrints",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of a page from safe dig prints"
+										},
+										{
+											"name": "Flame retardant clothing",
+											"category_code": "AEFlameRetardantClothing",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of operative wearing flame retardant clothing"
+										}
+									]
+								},
+								{
+									"id": "2",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you reinstating with bitumen product?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "AssetReinstating",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+									"mandatory_answer": "yes",
+									"given_answer": "",
+									"image_path": "",
+									"instruction": "Tooltip on the photo options",
+									"imagearray": [{
+											"name": "Cat",
+											"category_code": "ARCat",
+											"image_name": "tooltip_iq.png",
+										"description": "Take photo of calibration sticker"
+										},
+										{
+											"name": "Genny",
+											"category_code": "ARGenny",
+											"image_name": "tooltip_iq.png",
+											"description": ""
+										},
+										{
+											"name": "Saw Cutter with dust suppression",
+											"category_code": "ARSawCutter",
+											"image_name": "tooltip_iq.png",
+											"description": "Show dust suppression on Saw"
+										},
+										{
+											"name": "NRSWA Card",
+											"category_code": "ARNRSWACard",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of card in date front and back"
+										},
+										{
+											"name": "Flame retardant clothing",
+											"category_code": "ARFlameRetardantClothing",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of operative wearing flame retardant clothing"
+										}
+									]
+								},
+								{
+									"id": "2",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Plant in good condition and not leaking oils etc?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "ARPlantGoodCondition",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+									"mandatory_answer": "yes",
+									"given_answer": "",
+									"image_path": "",
+									"instruction": "Take photo of plant condition",
+									"imagearray": [{
+										"name": "Box keys and mechanical aids available to check frame and cover bedding is not affected by compaction",
+										"category_code": "ARBoxKeysMechanicalAids",
+										"image_name": "tooltip_iq.png",
+										"description": "Photo Box keys and mechanical aids to show available"
+									}]
+								},
+								{
+									"id": "2",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Is their products segragated on the vehicle?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "ARProductsSegregated",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": false,
+									"blocked_option": "1",
+									"mandatory_answer": "yes",
+									"given_answer": "",
+									"image_path": "",
+									"instruction": "Tooltip on the photo options",
+									"imagearray": [{
+										"name": "Products Segregated",
+										"category_code": "ARProductsSegregated",
+										"image_name": " ",
+										"description": "Take photo of vehicle materials"
+									}]
+								}
+							]
+						},
+
+						{
+							"id": "3",
+							"sub_title": "Cable",
+							"questions": [{
+									"id": "3",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you entering an underground box?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "CableUndergroundBox",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+								    "mandatory_answer": "yes",
+								    "given_answer": "",
+								    "image_path": "",
+								    "instruction":  "Tooltip on the photo options",
+									"imagearray": [{
+											"name": "Box key",
+											"category_code": "CABoxKey",
+											"image_name": "tooltip_iq.png",
+										    "description": "Photo of the box key"
+										},
+										{
+											"name": "Box roller",
+											"category_code": "CABoxRoller",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the box roller"
+										},
+										{
+											"name": "GDU",
+											"category_code": "CAGDU",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the GDU calibration sticker"
+										},
+										{
+											"name": "SLG",
+											"category_code": "CASLG",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of the SLG available on vehicle stored correctly"
+										}
+									]
+								},
+								{
+									"id": "3",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you using a cable winch?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "CableWinch",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+									"mandatory_answer": "yes",
+									"given_answer": "",
+									"image_path": "",
+									"instruction": "Tooltip on the photo options",
+									"imagearray": [{
+											"name": "Vehicle check sheet completed",
+											"category_code": "CWVehicleCheckSheet",
+											"image_name": "tooltip_iq.png",
+										"description": "Photo of completed vehicle check sheet"
+
+									},
+										{
+											"name": "All switches, function controls in good condition",
+											"category_code": "CWSwitchesControlsGood",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of switch panel condition"
+										},
+										{
+											"name": "Lights, beacons, warning devices",
+											"category_code": "CWLightsBeacons",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of hazard beacons"
+										},
+										{
+											"name": "Winch safety guards in place and in good condition",
+											"category_code": "CWWinchSafetyGuardsGood",
+											"image_name": "tooltip_iq.png",
+											"description": " Photo of safety guard"
+										}
+									]
+								}
+
+							]
+						},
+						{
+							"id": "4",
+							"sub_title": "Civils Reinstator",
+							"questions": [{
+									"id": "4",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Are you reinstating with bitumen product?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "CivilsReinstatorBitumen",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+								"mandatory_answer": "yes",
+								"given_answer": "",
+								"image_path": "",
+								"instruction": "Tooltip on the photo options",
+									"imagearray": [{
+											"name": "Cat",
+											"category_code": "CRCat",
+											"image_name": "tooltip_iq.png",
+										"description": "Take photo of calibration sticker"
+										},
+										{
+											"name": "Genny",
+											"category_code": "CRGenny",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of calibration sticker"
+										},
+										{
+											"name": "Saw Cutter with dust suppression",
+											"category_code": "CRSawCutter",
+											"image_name": "tooltip_iq.png",
+											"description": "Show dust suppression on Saw"
+										},
+										{
+											"name": "NRSWA Card",
+											"category_code": "CRNRSWACard",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of card in date front and back"
+										},
+										{
+											"name": "Flame retardant clothing",
+											"category_code": "CRFlameRetardantClothing",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of operative wearing flame retardant clothing"
+										}
+									]
+								},
+								{
+									"id": "4",
+									"type": "radio_yes_photo",
+									"validation": "radio",
+									"question": "Plant in good condition and not leaking oils etc?",
+									"work_point": "",
+									"point_item": "",
+									"category_code": "CRPlantGoodCondition",
+									"default_answer": "",
+									"no_of_images": "",
+									"mandatory": true,
+									"mandatory_answer": "yes",
+									"given_answer": "",
+									"image_path": "",
+									"instruction": "Take photo of plant condition",
+									"imagearray": [{
+											"name": "Box keys and mechanical aids available to check frame and cover bedding is not affected by compaction",
+											"category_code": "CRBoxKeysMechanicalAids",
+											"image_name": "tooltip_iq.png",
+										"description":"photo of box keys and mechanical aids to show available"
+										},
+										{
+											"name": "Is their products segragated on the vehicle?",
+											"category_code": "CRProductsSegregated",
+											"image_name": "tooltip_iq.png",
+											"description": "Take photo of vehicle materials"
+										},
+										{
+											"name": "PPE being worn",
+											"category_code": "PPEWorn",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of operative wearing PPE"
+										},
+										{
+											"name": "ID Card",
+											"category_code": "PhotoId",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of ID card"
+										},
+										{
+											"name": "Lace up safety boots",
+											"category_code": "LaceUpBoots",
+											"image_name": "tooltip_iq.png",
+											"description": "Photo of boots"
+										}
+									]
+								}
+							]
+						}
+
+					]
+				}
+			]
+		},
+
+		"footer": {
+			"items": [
+
+			]
+		}
+	},
+
+	"drop_downlist": [{
+			"type": "drop_down",
+			"category": "Workstream",
+			"items": [{
+					"id": "1",
+					"name": "Civils"
+				},
+				{
+					"id": "2",
+					"name": "Asset"
+				},
+				{
+					"id": "3",
+					"name": "Cable"
+				},
+				{
+					"id": "4",
+					"name": "Civils Reinstator"
+				}
+
+
+			]
+		},
+		{
+			"type": "RadioGroup",
+			"category": "all",
+			"items": [{
+					"id": "1",
+					"name": "Yes"
+				},
+				{
+					"id": "2",
+					"name": "No"
+				}
+			]
+		},
+		{
+			"type": "radio_yes_photo",
+			"category": "all",
+			"items": [{
+					"id": "1",
+					"name": "Yes"
+				},
+				{
+					"id": "2",
+					"name": "No"
+				}
+			]
+		}
+
+	]
+
+}

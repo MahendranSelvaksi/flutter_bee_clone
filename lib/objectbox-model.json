@@ -1,0 +1,274 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7292107109677198906",
+      "lastPropertyId": "3:3182952786789225637",
+      "name": "User",
+      "properties": [
+        {
+          "id": "1:8695199281253615874",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3586023183850932276",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:3182952786789225637",
+          "name": "email",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:5994359312996350527",
+      "lastPropertyId": "19:8054822858723008887",
+      "name": "UserLoginData",
+      "properties": [
+        {
+          "id": "1:3938460108709663894",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7711843345973175865",
+          "name": "userId",
+          "type": 9
+        },
+        {
+          "id": "3:2046823026047832525",
+          "name": "accessToken",
+          "type": 9
+        },
+        {
+          "id": "4:4536174782767400820",
+          "name": "accessTokenGeneratedDate",
+          "type": 9
+        },
+        {
+          "id": "5:8182254269292356351",
+          "name": "accessTokenExpiryDate",
+          "type": 9
+        },
+        {
+          "id": "6:7356478645148649225",
+          "name": "refreshToken",
+          "type": 9
+        },
+        {
+          "id": "7:4455190681759273063",
+          "name": "refreshTokenGeneratedDate",
+          "type": 9
+        },
+        {
+          "id": "8:4721903993237679034",
+          "name": "refreshTokenExpiryDate",
+          "type": 9
+        },
+        {
+          "id": "9:6734312305972309943",
+          "name": "firstName",
+          "type": 9
+        },
+        {
+          "id": "10:7458716871115879443",
+          "name": "lastName",
+          "type": 9
+        },
+        {
+          "id": "11:9038435084368303414",
+          "name": "jobTitleId",
+          "type": 9
+        },
+        {
+          "id": "12:6479525966926795435",
+          "name": "jobTitleDescription",
+          "type": 9
+        },
+        {
+          "id": "13:1633583812093267983",
+          "name": "emailId",
+          "type": 9
+        },
+        {
+          "id": "14:4312462791319619815",
+          "name": "cSSId",
+          "type": 9
+        },
+        {
+          "id": "15:6574666159704784329",
+          "name": "leadGangerCSSID",
+          "type": 9
+        },
+        {
+          "id": "16:394173729876767168",
+          "name": "isTeamLead",
+          "type": 1
+        },
+        {
+          "id": "17:1395266459815434106",
+          "name": "isUpdateSecurityQuestion",
+          "type": 1
+        },
+        {
+          "id": "18:8658605449483497665",
+          "name": "operativeTypeID",
+          "type": 6
+        },
+        {
+          "id": "19:8054822858723008887",
+          "name": "operativeTypeDescription",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:1069068686493097561",
+      "lastPropertyId": "14:690242995353791813",
+      "name": "AllFormData",
+      "properties": [
+        {
+          "id": "1:4623678920452075804",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1932044256247128405",
+          "name": "userId",
+          "type": 9
+        },
+        {
+          "id": "3:2243150620444573979",
+          "name": "orderNumber",
+          "type": 9
+        },
+        {
+          "id": "4:2866046327911989478",
+          "name": "visitId",
+          "type": 9
+        },
+        {
+          "id": "5:7739842406391922921",
+          "name": "scheduleId",
+          "type": 9
+        },
+        {
+          "id": "6:5644090261436924588",
+          "name": "formId",
+          "type": 9
+        },
+        {
+          "id": "7:7433697115058883878",
+          "name": "createdAt",
+          "type": 10
+        },
+        {
+          "id": "8:1348121902226971102",
+          "name": "catCode",
+          "type": 9
+        },
+        {
+          "id": "9:3253065725589258455",
+          "name": "answer",
+          "type": 9
+        },
+        {
+          "id": "10:3942648006766705291",
+          "name": "questionType",
+          "type": 9
+        },
+        {
+          "id": "11:138746756714875909",
+          "name": "modifiedAt",
+          "type": 10
+        },
+        {
+          "id": "12:6407152199124483812",
+          "name": "isVisible",
+          "type": 1
+        },
+        {
+          "id": "13:3218828745874236058",
+          "name": "formName",
+          "type": 9
+        },
+        {
+          "id": "14:690242995353791813",
+          "name": "createdOn",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:174694312030200874",
+      "lastPropertyId": "8:6289839311524790851",
+      "name": "APITokenDetails",
+      "properties": [
+        {
+          "id": "1:123944130262372029",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3243186351960754419",
+          "name": "userId",
+          "type": 9
+        },
+        {
+          "id": "3:3322569877446199892",
+          "name": "accessToken",
+          "type": 9
+        },
+        {
+          "id": "4:441637782162156290",
+          "name": "accessTokenGeneratedDate",
+          "type": 9
+        },
+        {
+          "id": "5:1190565569035096482",
+          "name": "accessTokenExpiryDate",
+          "type": 9
+        },
+        {
+          "id": "6:4231550303489619871",
+          "name": "refreshToken",
+          "type": 9
+        },
+        {
+          "id": "7:7106335958606046680",
+          "name": "refreshTokenGeneratedDate",
+          "type": 9
+        },
+        {
+          "id": "8:6289839311524790851",
+          "name": "refreshTokenExpiryDate",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "4:174694312030200874",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
