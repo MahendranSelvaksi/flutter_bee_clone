@@ -342,7 +342,7 @@ class _QuickLinksSection extends State<QuickLinksSection> {
               crossAxisCount: 3,
               shrinkWrap: true,
               primary: false,
-              childAspectRatio: 1.0,
+              childAspectRatio: 0.8,
               crossAxisSpacing: 4.0,
               // Reduced horizontal spacing
               mainAxisSpacing: 4.0,
@@ -351,38 +351,36 @@ class _QuickLinksSection extends State<QuickLinksSection> {
               children: List.generate(Utils.dashBoardMenu.length, (index) {
                 return Padding(
                   padding: const EdgeInsets.all(2.0),
-                  child: Container(
-                    child: InkWell(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(color: Colors.black),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              Utils.dashBoardMenuIcons[index],
-                              fit: BoxFit.cover,
-                              height: 50,
-                              width: 50,
-                            ),
-                            SizedBox(height: 15),
-                            Text(
-                              Utils.dashBoardMenu[index],
-                              style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.w500,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                          ],
-                        ),
+                  child: InkWell(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.black),
                       ),
-                      onTap: () {
-                      },
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            Utils.dashBoardMenuIcons[index],
+                            fit: BoxFit.cover,
+                            height: 50,
+                            width: 50,
+                          ),
+                          SizedBox(height: 15),
+                          Text(
+                            Utils.dashBoardMenu[index],
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
                     ),
+                    onTap: () {
+                    },
                   ),
                 );
               }),

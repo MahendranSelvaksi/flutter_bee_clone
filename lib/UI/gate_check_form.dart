@@ -197,7 +197,7 @@ class _gateCheckState extends State<GateCheck> {
                     width: double.infinity,
                     child: ElevatedButton.icon(
                       onPressed: () {
-                        utils.showToast("Clicked Submit Button");
+                       // utils.showToast("Clicked Submit Button");
                         saveFormDataToDB();
                       },
                       label: const Text(
