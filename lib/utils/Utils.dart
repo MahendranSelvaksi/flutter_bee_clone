@@ -11,7 +11,7 @@ import 'package:internet_connection_checker_plus/internet_connection_checker_plu
 import 'package:intl/intl.dart';
 import 'package:path/path.dart';
 import 'package:progress_dialog_null_safe/progress_dialog_null_safe.dart';
-
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:uuid/uuid.dart';
 
 class Utils{
@@ -44,6 +44,20 @@ class Utils{
     bool result = await InternetConnection().hasInternetAccess;
     return result;
   }
+  /*Future<bool> checkInternetConnectivity() async {
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    return connectivityResult != ConnectivityResult.none;
+  }*/
+  Future<bool> checkInternetConnectivity() async {
+    var connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult == ConnectivityResult.mobile) {
+      return true;
+    } else if (connectivityResult == ConnectivityResult.wifi) {
+      return true;
+    }
+    return false;
+  }
+
 
 
   ProgressDialog getProgressDialog(BuildContext context, String message){

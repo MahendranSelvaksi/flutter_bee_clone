@@ -35,7 +35,9 @@ class _commonToolBar extends State<CommonToolBar> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 icon: Icon(
                   size: 40,
                   Icons.arrow_back_ios_new_outlined,

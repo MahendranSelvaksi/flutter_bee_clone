@@ -23,6 +23,8 @@ import '../RequestModels/GateCheckApiRequest.dart';
 import '../utils/APIService.dart';
 import 'CommonToolBar.dart';
 
+import 'package:flutter1/utils/ConnectionStatusListener.dart';
+
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
@@ -42,6 +44,7 @@ class _gateCheckState extends State<GateCheck> {
   AllFormData dropDownAnswerData = AllFormData();
   HashSet<AllFormData> answerSet = HashSet();
   Utils utils = Utils();
+  var connectionStatus = ConnectionStatusListener.getInstance();
   bool isVisible = true;
   String visitId = '';
   bool isFormCompleted = false;
@@ -350,7 +353,14 @@ class _gateCheckState extends State<GateCheck> {
         print('data save response :::: $val');
       }
       //  Navigator.pop(context);
-      apiCall();
+      connectionStatus.checkConnection().then((value) {
+        if(value==true){
+          apiCall();
+        }else{
+          utils.showToast('Please check with your internet connection...');
+          Navigator.pop(context);
+        }
+      });
     } catch (e) {
       print(e);
     }
@@ -373,11 +383,6 @@ class _gateCheckState extends State<GateCheck> {
 
   Future<void> apiCall() async {
     try {
-      bool isInternetConnected = false;
-      utils.isInternetConnectionAvailable().then((value) {
-        isInternetConnected = value;
-      });
-      if (!isInternetConnected) {
         ProgressDialog pr = utils.getProgressDialog(context, 'Please wait...');
         await pr.show();
 
@@ -447,7 +452,6 @@ class _gateCheckState extends State<GateCheck> {
         } else {
           return await generateAPIRequest(apiImageList, pr);
         }
-      } else {}
     } catch (e) {
       print(e);
     }

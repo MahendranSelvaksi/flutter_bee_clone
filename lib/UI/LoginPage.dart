@@ -12,6 +12,7 @@ import 'package:flutter1/repository/AllFormData.dart';
 import 'package:flutter1/repository/login_response.dart';
 import 'package:flutter1/repository/user.dart';
 import 'package:flutter1/utils/APIService.dart';
+import 'package:flutter1/utils/ConnectionStatusListener.dart';
 import 'package:flutter1/utils/Utils.dart';
 import 'package:logger/logger.dart';
 import 'package:progress_dialog_null_safe/progress_dialog_null_safe.dart';
@@ -34,6 +35,7 @@ class LoginPage extends StatefulWidget{
 class LoginState extends State<LoginPage>{
   final logger = Logger();
   Utils utils = Utils();
+  var connectionStatus = ConnectionStatusListener.getInstance();
    String _email = "";
    String _password= "";
   final _formKey = GlobalKey<FormState>();
@@ -172,14 +174,15 @@ class LoginState extends State<LoginPage>{
                                              print("Email $_email");
                                              print("Password $_password");
                                              bool isInternetConnected=false;
-                                             utils.isInternetConnectionAvailable().then((value){
+                                             connectionStatus.checkConnection().then((value){
                                                isInternetConnected = value;
+                                               print('isInternetConnected ::: $isInternetConnected');
+                                               if(isInternetConnected){
+                                                 loginApiCall();
+                                               }else{
+                                                 utils.showToast('Please check with your internet connection...');
+                                               }
                                              });
-                                             if(!isInternetConnected){
-                                               loginApiCall();
-                                             }else{
-                                               utils.showToast('Please check with your internet connection...');
-                                             }
                                            }else{
                                              utils.showToast('Please fill valid login details...');
                                            }
