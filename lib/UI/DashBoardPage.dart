@@ -352,33 +352,31 @@ class _QuickLinksSection extends State<QuickLinksSection> {
                 return Padding(
                   padding: const EdgeInsets.all(2.0),
                   child: InkWell(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.black),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Image.asset(
-                            Utils.dashBoardMenuIcons[index],
-                            fit: BoxFit.cover,
-                            height: 50,
-                            width: 50,
+                    child:
+                        Card(
+                          child:
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                Utils.dashBoardMenuIcons[index],
+                                fit: BoxFit.cover,
+                                height: 50,
+                                width: 50,
+                              ),
+                              SizedBox(height: 15),
+                              Text(
+                                Utils.dashBoardMenu[index],
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
                           ),
-                          SizedBox(height: 15),
-                          Text(
-                            Utils.dashBoardMenu[index],
-                            style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
-                      ),
-                    ),
+                        ),
                     onTap: () {
                     },
                   ),
